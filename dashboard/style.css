@@ -1,0 +1,20 @@
+:root{--bg:#0b1118;--card:#121b26;--line:#1f2d3d;--txt:#dbe6f0;--mut:#7d91a6;--safe:#22c55e;--sus:#f59e0b;--bad:#ef4444;--acc:#38bdf8}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--txt);font:15px/1.5 system-ui,Segoe UI,sans-serif}
+main{max-width:860px;margin:0 auto;padding:24px 16px}header{text-align:center;margin-bottom:20px}
+h1{margin:0;letter-spacing:.3em;color:var(--acc)}header p{margin:4px 0;color:var(--mut)}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px;margin-bottom:16px;animation:in .35s ease}
+@keyframes in{from{opacity:0;transform:translateY(6px)}}
+form{display:flex;gap:8px}input{flex:1;background:#0b1118;border:1px solid var(--line);color:var(--txt);padding:12px;border-radius:8px;font:inherit}
+button{background:var(--acc);color:#04202e;border:0;border-radius:8px;padding:0 20px;font-weight:600;cursor:pointer}button:disabled{opacity:.5}
+.link{background:none;color:var(--mut);font-size:12px;padding:0;float:right}
+.err{color:var(--bad);margin:10px 0 0}.top{display:flex;justify-content:space-between;align-items:center}
+.badge{font-size:22px;font-weight:700;padding:6px 16px;border-radius:8px;border:1px solid}
+.SAFE{color:var(--safe)}.SUSPICIOUS{color:var(--sus)}.PHISHING{color:var(--bad)}
+.score span{font-size:38px;font-weight:700}.score small{display:block;color:var(--mut);text-align:right}
+.bar{height:8px;background:#0b1118;border-radius:4px;margin:12px 0;overflow:hidden}#fill{height:100%;width:0;background:currentColor;transition:width .6s}
+.muted{color:var(--mut);font-size:13px}h3{margin:16px 0 8px;font-size:14px;color:var(--mut);text-transform:uppercase;letter-spacing:.08em}
+#reasons li{margin:4px 0}table{width:100%;border-collapse:collapse;font-size:13px}td{padding:4px 6px;border-bottom:1px solid var(--line)}td:last-child{text-align:right;font-family:monospace}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}@media(max-width:640px){.grid{grid-template-columns:1fr}form{flex-direction:column}button{padding:12px}}
+dl{display:grid;grid-template-columns:auto 1fr;gap:6px 16px;margin:0}dd{margin:0;color:var(--safe);font-weight:600}
+.hist{list-style:none;padding:0;margin:0;font-size:13px}.hist li{padding:5px 0;border-bottom:1px solid var(--line);display:flex;gap:8px;cursor:pointer}
+.hist span:first-child{flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}

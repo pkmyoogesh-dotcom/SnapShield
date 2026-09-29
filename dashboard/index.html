@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>SnapShield</title><link rel="stylesheet" href="style.css"></head>
+<body><main>
+<header><h1>SNAPSHIELD</h1><p>On-Device Explainable Phishing Detection</p></header>
+<section class="card"><form id="f"><input id="url" type="text" autocomplete="off" spellcheck="false" placeholder="https://example.com/path" maxlength="2048" required>
+<button id="go">Analyze</button></form><p id="err" class="err" hidden></p></section>
+<section id="result" class="card" hidden>
+<div class="top"><div id="cls" class="badge"></div><div class="score"><span id="pct"></span><small>risk score</small></div></div>
+<div class="bar"><div id="fill"></div></div><p id="engine" class="muted"></p>
+<h3>Why?</h3><ul id="reasons"></ul><h3>Feature analysis</h3><table id="feat"></table></section>
+<div class="grid">
+<section class="card"><h3>System status</h3><dl id="status"><dt>AI Engine</dt><dd>LOCAL</dd><dt>Cloud AI</dt><dd>NOT REQUIRED</dd><dt>Inference</dt><dd>ON-DEVICE</dd><dt>Model</dt><dd id="model">checking…</dd></dl></section>
+<section class="card"><h3>Recent scans <button id="clear" class="link">clear</button></h3><ul id="hist" class="hist"></ul></section></div>
+</main><script src="app.js"></script></body></html>

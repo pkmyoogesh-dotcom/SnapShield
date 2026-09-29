@@ -1,0 +1,7 @@
+.venv/
+__pycache__/
+*.pyc
+dataset/raw/*.csv
+dataset/raw/*.zip
+dataset/processed/*.csv
+.pytest_cache/
